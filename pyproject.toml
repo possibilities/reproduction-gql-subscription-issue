@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "reproduction-gql-subscription-issue"
+version = "0.0.1"
+description = "Repro GQL sub issue"
+authors = ["Mike Bannister <notimpossiblemike@gmail.com>"]
+readme = "readme.md"
+packages = []
+
+[tool.poetry.dependencies]
+aiohttp = "^3.8.4"
+python = "^3.11"
+strawberry-graphql = "^0.189.1"
+gql = {extras = ["aiohttp", "websockets"], version = "^3.4.1"}
+
+[tool.poetry.group.dev.dependencies]
+aiohttp-devtools = "^1.0.post0"
+black = "^23.3.0"
+flake8 = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
